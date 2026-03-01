@@ -1,61 +1,45 @@
-# 🚀 Getting started with Strapi
+# Strapi CMS
 
-Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI) which lets you scaffold and manage your project in seconds.
+Strapi CMS with PostgreSQL, pre-configured for one-click deployment on Zeabur.
 
-### `develop`
+[![Deploy on Zeabur](https://zeabur.com/button.svg)](https://zeabur.com/templates/M84AZ5)
 
-Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-develop)
+## Deploy
 
-```
+Click the button above to deploy your own Strapi CMS instance. You will be asked to:
+
+1. Enter a domain name (e.g. `my-cms`, your site will be at `my-cms.zeabur.app`)
+2. Click **Deploy**
+3. Wait a few minutes for the build to complete
+4. Open `https://<your-domain>.zeabur.app/admin` to create your admin account
+
+PostgreSQL and all required environment variables are configured automatically.
+
+## Local Development
+
+```bash
+cp .env.example .env
+# Edit .env with your own values
+npm install
 npm run develop
-# or
-yarn develop
 ```
 
-### `start`
+Open [http://localhost:1337/admin](http://localhost:1337/admin) to access the admin panel.
 
-Start your Strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-start)
+## Environment Variables
 
-```
-npm run start
-# or
-yarn start
-```
+See [`.env.example`](.env.example) for a full list of configurable variables. Key variables:
 
-### `build`
+| Variable | Description |
+|---|---|
+| `DATABASE_CLIENT` | Database type (`sqlite` or `postgres`) |
+| `DATABASE_URL` | PostgreSQL connection string |
+| `APP_KEYS` | Application keys (comma-separated) |
+| `ADMIN_JWT_SECRET` | Secret for admin JWT tokens |
+| `JWT_SECRET` | Secret for user JWT tokens |
 
-Build your admin panel. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-build)
+## Learn More
 
-```
-npm run build
-# or
-yarn build
-```
-
-## ⚙️ Deployment
-
-Strapi gives you many possible deployment options for your project including [Strapi Cloud](https://cloud.strapi.io). Browse the [deployment section of the documentation](https://docs.strapi.io/dev-docs/deployment) to find the best solution for your use case.
-
-```
-yarn strapi deploy
-```
-
-## 📚 Learn more
-
-- [Resource center](https://strapi.io/resource-center) - Strapi resource center.
-- [Strapi documentation](https://docs.strapi.io) - Official Strapi documentation.
-- [Strapi tutorials](https://strapi.io/tutorials) - List of tutorials made by the core team and the community.
-- [Strapi blog](https://strapi.io/blog) - Official Strapi blog containing articles made by the Strapi team and the community.
-- [Changelog](https://strapi.io/changelog) - Find out about the Strapi product updates, new features and general improvements.
-
-Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/strapi). Your feedback and contributions are welcome!
-
-## ✨ Community
-
-- [Discord](https://discord.strapi.io) - Come chat with the Strapi community including the core team.
-- [Forum](https://forum.strapi.io/) - Place to discuss, ask questions and find answers, show your Strapi project and get feedback or just talk with other Community members.
-- [Awesome Strapi](https://github.com/strapi/awesome-strapi) - A curated list of awesome things related to Strapi.
-
----
-
-<sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
+- [Strapi Documentation](https://docs.strapi.io)
+- [Strapi CLI Reference](https://docs.strapi.io/dev-docs/cli)
+- [Zeabur Documentation](https://zeabur.com/docs)
