@@ -32,6 +32,10 @@
     "like_count": {
       "type": "integer",
       "default": 0
+    },
+    "mood": {
+      "type": "string",
+      "maxLength": 50
     }
   }
 }

@@ -499,6 +499,10 @@ export interface ApiProfileProfile extends Struct.SingleTypeSchema {
       'api::profile.profile'
     > &
       Schema.Attribute.Private;
+    mood: Schema.Attribute.String &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 50;
+      }>;
     name: Schema.Attribute.String & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
